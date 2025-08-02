@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Developers - Hampton Building Control</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-gray-800">
+
+<!--Navigation Bar-->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center"><img src="images/logo.png" alt="Hampton Building Control Logo" class="h-16 mr-3"></a>
+            
+            <nav id="desktop-nav" class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="homeowners.html" class="nav-link">Homeowners</a>
+                <a href="developers.html" class="nav-link active">Developers</a>
+                <a href="professionals.html" class="nav-link">Professionals</a>
+                <a href="#contact" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-900 transition">Contact Us</a>
+            </nav>
+
+            <div class="md:hidden"><button id="mobile-menu-button" class="text-gray-900 focus:outline-none"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button></div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <a href="index.html" class="block py-3 px-6 text-gray-600 hover:bg-gray-50 nav-link">Home</a>
+            <a href="homeowners.html" class="block py-3 px-6 text-gray-600 hover:bg-gray-50 nav-link">Homeowners</a>
+            <a href="developers.html" class="block py-3 px-6 text-gray-600 hover:bg-gray-50 nav-link active">Developers</a>
+            <a href="professionals.html" class="block py-3 px-6 text-gray-600 hover:bg-gray-50 nav-link">Professionals</a>
+            <a href="#contact" class="block py-3 px-6 text-gray-600 hover:bg-gray-50">Contact Us</a>
+        </div>
+    </header>
+
+<!--Hero Section-->
+    <main>
+        <section class="hero-section text-center py-24 md:py-30" style="background-image: url('images/developers-banner.jpeg');">
+            <div class="hero-overlay"></div>
+            <div class="container mx-auto px-6 relative">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Streamlining Developments</h1>
+                <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">A simpler way to get developments out of the ground.</p>
+            </div>
+        </section>
+
+<!--Developer Pricing-->
+        <section id="pricing" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Developer Pricing</h2>
+                    <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">Fixed prices for the Self-Builder, small or large developer for any plot type from flat to detached dwelling.</p>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <div class="pricing-card bg-white p-8 rounded-xl shadow-lg border-2 border-orange-500 flex flex-col relative">
+                        <div class="absolute top-0 -mt-3 left-1/2 -translate-x-1/2"><span class="bg-orange-500 text-white text-sm font-bold px-4 py-1 rounded-full">Most Popular</span></div>                       
+                        <h3 class="text-2xl font-semibold mb-2">Self-Build</h3>
+                        <p class="text-gray-500 mb-6 text-sm">Perfect for a one off</p>
+                        <p class="text-5xl font-bold mb-6">£1,450</p>
+                        <p class="text-gray-600 flex-grow">This is for homeowners or developers looking to errect a single property on a single plot</p>
+                    </div>
+                    <div class="pricing-card bg-white p-8 rounded-xl shadow-lg border border-gray-200 flex flex-col relative">
+                        <div class="absolute top-0 right-0 bg-gray-700 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">Over 15% discount</div>
+                        <h3 class="text-2xl font-semibold mb-2 mt-4">Developer 1</h3>
+                        <p class="text-gray-500 mb-6 text-sm">Priced per plot type</p>
+                        <p class="text-5xl font-bold mb-6">£1,200</p>
+                        <p class="text-gray-600 flex-grow">For developers who have at least 2 Plot Types, but no more than 10 plots in total</p>
+                    </div>
+                    <div class="pricing-card bg-white p-8 rounded-xl shadow-lg border border-gray-200 flex flex-col relative">
+                        <div class="absolute top-0 right-0 bg-gray-700 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">Over 35% discount</div>
+                        <h3 class="text-2xl font-semibold mb-2">Developer 2</h3>
+                        <p class="text-gray-500 mb-6 text-sm">Priced per plot type/p>
+                        <p class="text-5xl font-bold mb-6">£950</p>
+                        <p class="text-gray-600 flex-grow">For larger developers who have at least 10 Plot Types but no more than 75 plots in total</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!--Whats Included-->
+ <section id="whats included" class="py-16 md:py-20">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">What's Included (And What's Not)</h2>
+            <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">We believe in complete transparency, that's why we provide a breakdown of everything you can expect to recieve.</p>
+        </div>
+
+        <div class="flex flex-col items-center gap-8">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
+                
+                <div class="bg-white rounded-lg p-6 shadow-md border-l-4 border-green-500 flex flex-col">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Always Included</h3>
+                    <p class="text-gray-600 flex-grow">Floor plans, elevations & sections, site & location plans, details, BTU & U-value calculations, 
+                        services layouts<sup>1</sup>, Part M, Part R, Part S, compliance & regulations document, Professional Indemnity insurance<sup>2</sup></sup>.</p>
+                    <div class="mt-4 pt-4 border-t border-gray-200 flex items-center">
+                        <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <p class="font-semibold text-green-700">Includes Submission to the LABC</p>
+                    </div>                    
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-md border-l-4 border-red-500 flex flex-col">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">What's Not Included</h3>
+                    <p class="text-gray-600 flex-grow">Structural calculations, specialist reports, application & submission fees, site surveys, detailed design, construction drawings.</p>
+                    <div class="mt-4 pt-4 border-t border-gray-200 flex items-center">
+                        <svg class="w-6 h-6 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        <p class="font-semibold text-red-700">We Leave This With You</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10 max-w-4xl mx-auto text-center">
+            <p class="text-sm text-slate-600 leading-relaxed">
+                <sup>1</sup> Only Building Control related items only.
+            </p>
+            <p class="text-sm text-slate-600 leading-relaxed mt-1">
+                <sup>3</sup> Site specific cover is arranged, typically £1m.
+            </p>
+
+        </div>
+        
+        </div>
+
+    </div>
+</section>
+
+<!--How To Engage Us-->
+<section id="process" class="bg-gray-50 py-20">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">How To Engage Us</h2>
+            <p class="text-lg text-gray-600 mt-2">A process designed for efficiency.</p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-12 relative">
+            <div class="text-center">
+                <div class="relative mb-4">
+                    <div class="w-20 h-20 bg-orange-500 text-white text-2xl font-bold rounded-full flex items-center justify-center mx-auto z-10 relative">1</div>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Instruct</h3>
+                <p class="text-gray-600">You instruct us to proceed with your application and send us your plans and any other information in DWG, RVT or PDF.</p>
+            </div>
+            <div class="text-center">
+                <div class="relative mb-4">
+                    <div class="w-20 h-20 bg-gray-800 text-white text-2xl font-bold rounded-full flex items-center justify-center mx-auto z-10 relative">2</div>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Retainer</h3>
+                <p class="text-gray-600">We take an initial payment equal to 40% of the final fee, which we hold on account and draw-down at our standard hourly rate.</p>
+            </div>
+            <div class="text-center">
+                <div class="relative mb-4">
+                    <div class="w-20 h-20 bg-gray-800 text-white text-2xl font-bold rounded-full flex items-center justify-center mx-auto z-10 relative">3</div>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Production</h3>
+                <p class="text-gray-600">We produce the documentation needed for your unique application. This varies depending on the number of plots.</p>
+            </div>
+            <div class="text-center">
+                <div class="relative mb-4">
+                    <div class="w-20 h-20 bg-gray-800 text-white text-2xl font-bold rounded-full flex items-center justify-center mx-auto z-10 relative">4</div>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Approval</h3>
+                <p class="text-gray-600">We issue watermarked versions of your documents via a shared drive to varify during the process.</p>
+            </div>
+        </div>
+
+        <div class="mt-12 flex flex-wrap justify-center gap-12">
+            <div class="text-center md:w-1/4">
+                <div class="relative mb-4">
+                    <div class="w-20 h-20 bg-gray-800 text-white text-2xl font-bold rounded-full flex items-center justify-center mx-auto z-10 relative">5</div>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Payments</h3>
+                <p class="text-gray-600">We invoice every 30 days based on progress or the full final amount due, whichever comes sooner.</p>
+            </div>
+            <div class="text-center md:w-1/4">
+                <div class="relative mb-4">
+                    <div class="w-20 h-20 bg-green-600 text-white text-2xl font-bold rounded-full flex items-center justify-center mx-auto z-10 relative">6</div>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Completion</h3>
+                <p class="text-gray-600">We recieve final payment and submit the application on your behalf as the Principal Designer.</p>
+            </div>
+        </div>
+
+    </div>
+
+<!--Single Plot Developments-->
+</section>
+        <section class="py-20">
+            <div class="container mx-auto px-6 lg:flex lg:items-center lg:gap-12">
+                <div class="lg:w-1/2"><img src="images/developers-single-house.jpeg" alt="A modern home extension" class="rounded-lg shadow-xl w-full h-auto"></div>
+                <div class="lg:w-1/2 mt-10 lg:mt-0">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Single Plot Developments</h3>
+                    <p class="text-lg text-gray-600">You could be taking your first steps into property development or building your dream home on a new plot, 
+                    whatever your needs we ensure every aspect of your project is fully compliant. We review and detail your project ensuring full compliance against every applicable 
+                    element of the Approved Documents, within the 2010 Building Regulations.</p>
+                    <br> <p class="text-lg text-gray-600">Our detailed approach ensures your Building Control application is approved quickly, so you can get started on your project.</p>
+                    <br> <p class="text-lg text-gray-600">At the moment most Local Authorities are quoting <strong class="font-semibold">5 Weeks</strong> to validate application.</p>
+            </div>
+        </section>
+
+<!--Multiple Plot Developments-->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 lg:flex lg:items-center lg:gap-12">
+                <div class="lg:w-1/2 mt-10 lg:mt-0 lg:order-2"><img src="images/developers-construction.jpeg" alt="A family enjoying their new kitchen" class="rounded-lg shadow-xl w-full h-auto"></div>
+                <div class="lg:w-1/2 lg:order-1">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Multiple Plot Developments</h3>
+                    <p class="text-lg text-gray-600">You've aquired the site, have gained planning permission and have developed your budget....you're ready to make a start. 
+                        Speed and efficiency are paramount to ensure you realise your margin and achieve your forecasted revenues. Markets change and deleays could could wipe out your profits.</p>
+                    <br> <p class="text-lg text-gray-600">We have a wealth of expereince and know first-hand the complexities of site development, that's why we're able to translate site requirements quickly and efficiently. </p>
+                    <br> <p class="text-lg text-gray-600">This expereince ensures your development stays on track from the start. </p>
+
+                </div>
+            </div>
+        </section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="py-20">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">A Few Sample Details</h2>
+            <p class="text-lg text-gray-600 mt-2 max-w-2xl mx-auto">From single plot to larger developments, we provide the detailed plans needed for a smooth approval process.</p>
+        </div>
+
+        <!-- Responsive Grid for Gallery Images -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <!-- Gallery Item 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden group">
+                <div class="relative">
+                    <img src="images/developers-site-layout.png" alt="A modern home extension with large glass windows" class="w-full h-64 object-contain">
+                    <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-0 transition-all duration-300"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Typical Site Layout</h3>
+                    <p class="text-gray-600">A floorplan of a typical site layout showing services.</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden group">
+                <div class="relative">
+                    <img src="images/developers-plot-drainage.png" alt="Interior of a spacious loft conversion with skylights" class="w-full h-64 object-contain">
+                    <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-0 transition-all duration-300"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Plot Drainage</h3>
+                    <p class="text-gray-600">A floor plan of typical storm and foul drainage to a plot.</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden group">
+                <div class="relative">
+                    <img src="images/developers-floor-plans.png" alt="A newly constructed modern family home" class="w-full h-64 object-contain">
+                    <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-0 transition-all duration-300"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Internal Details</h3>
+                    <p class="text-gray-600">A floor plan of typical detail callouts and door/window types.</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 4 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden group">
+                <div class="relative">
+                    <img src="images/developers-sections.png" alt="A newly constructed modern family home" class="w-full h-64 object-contain">
+                    <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-0 transition-all duration-300"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Wall Sections</h3>
+                    <p class="text-gray-600">A section of a typical external wall system.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Frequently Asked Questions</h2>
+                <p class="text-lg text-gray-600 mt-2">Find answers to common questions about our services.</p>
+            </div>
+
+            <!-- FAQ Accordion -->
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="border-b border-gray-200">
+                    <button class="w-full text-left py-6 focus:outline-none accordion-button">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-gray-800">What is the first step to get started?</h3>
+                            <!-- Chevron Icon -->
+                            <svg class="w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="text-gray-600 pb-6">
+                            The first step is to contact us with your project details and plans. We will review your information and provide you with a detailed quote and a clear outline of the next steps. There's no obligation at this stage.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border-b border-gray-200">
+                    <button class="w-full text-left py-6 focus:outline-none accordion-button">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-gray-800">How quickly can you make a start?</h3>
+                            <svg class="w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="text-gray-600 pb-6">
+                            The lead-times can vary depending on our workload but typically we work on 7 working days. This depends on the information that's provided.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border-b border-gray-200">
+                    <button class="w-full text-left py-6 focus:outline-none accordion-button">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-gray-800">What other fees are involved?</h3>
+                            <svg class="w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="text-gray-600 pb-6">
+                            Our fee covers the production of our documentation and management of the submission. Any fees charged by the council or local authorities for the application itself, or any specialist reports are separate and will be payable directly by you.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="border-b border-gray-200">
+                    <button class="w-full text-left py-6 focus:outline-none accordion-button">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-gray-800">Do you provide a guarantee?</h3>
+                            <svg class="w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="text-gray-600 pb-6">
+                           We ensure all documentation is compliant, the final approval rests with the local authority. We act as your Principal Designer to ensure the application is as robust as possible, to minimize the need for amendments.
+                        </p>
+                    </div>
+                </div>
+
+                                <!-- FAQ Item 5 -->
+                <div class="border-b border-gray-200">
+                    <button class="w-full text-left py-6 focus:outline-none accordion-button">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-gray-800">Can you provide construction drawings?</h3>
+                            <svg class="w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="text-gray-600 pb-6">
+                           As an architectural practice we engage with our clients at every stage of the development, from the earliest budget planning to post completion. We can provide additional services but we apraise this on a project-by-project basis.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+<!--Contact Form-->
+        <section id="contact" class="bg-gray-800 py-20">
+            <div class="container mx-auto px-6">
+                <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                    <div class="text-center lg:text-left mb-12 lg:mb-0">
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to start your project?</h2>
+                        <p class="text-gray-300 text-lg max-w-xl mx-auto lg:mx-0 mb-8">Fill out the form to get in touch, and we'll get back to you as soon as possible for a no-obligation consultation.</p>
+                        <p class="text-gray-400">Alternatively, email us directly at <a href="mailto:hello@hamptonarchitectural.co.uk" class="text-orange-400 hover:underline">hello@hamptonarchitectural.co.uk</a></p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-lg shadow-2xl">
+                        <form action="#" method="POST">
+                            <div class="space-y-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-300">Full Name</label>
+                                    <div class="mt-1"><input type="text" name="name" id="name" required class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:ring-orange-500 focus:border-orange-500"></div>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-300">Email Address</label>
+                                    <div class="mt-1"><input type="email" name="email" id="email" required class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:ring-orange-500 focus:border-orange-500"></div>
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-gray-300">Phone Number</label>
+                                    <div class="mt-1"><input type="tel" name="phone" id="phone" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:ring-orange-500 focus:border-orange-500"></div>
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-300">Message</label>
+                                    <div class="mt-1"><textarea name="message" id="message" rows="4" required class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:ring-orange-500 focus:border-orange-500"></textarea></div>
+                                </div>
+                                <div><button type="submit" class="w-full bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold text-lg hover:bg-orange-600 transition">Send Message</button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+ 
+<!--Footer-->    
+<footer class="bg-gray-900 text-white">
+    <div class="container mx-auto px-6 py-8 text-center">
+
+        <div class="mb-4 flex justify-center space-x-6">
+            <a href="https://www.facebook.com/profile.php?id=61558602239180" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-white hover:text-gray-400 transition-colors duration-300">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/hamptonarchitectural/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-white hover:text-gray-400 transition-colors duration-300">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163zm0 1.802C8.845 3.965 8.548 3.977 7.27 4.029c-2.846.129-4.045 1.328-4.174 4.174-.052 1.278-.063 1.575-.063 4.797s.011 3.519.063 4.797c.13 2.846 1.328 4.045 4.174 4.174 1.278.052 1.575.063 4.797.063s3.519-.011 4.797-.063c2.846-.13 4.045-1.328 4.174-4.174.052-1.278.063-1.575.063-4.797s-.011-3.519-.063-4.797c-.13-2.846-1.328-4.045-4.174-4.174-1.278-.052-1.575-.063-4.797-.063zM12 6.837c-2.848 0-5.163 2.315-5.163 5.163s2.315 5.163 5.163 5.163 5.163-2.315 5.163-5.163S14.848 6.837 12 6.837zm0 8.529c-1.857 0-3.366-1.509-3.366-3.366s1.509-3.366 3.366-3.366 3.366 1.509 3.366 3.366-1.509 3.366-3.366 3.366zm5.188-8.312a1.231 1.231 0 11-2.462 0 1.231 1.231 0 012.462 0z" />
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/company/hamptonarchitectural/posts/?feedView=all&viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-white hover:text-gray-400 transition-colors duration-300">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+            </a>
+            <a href="https://x.com/MooseConsu72310" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="text-white hover:text-gray-400 transition-colors duration-300">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+            </a>
+        </div>
+
+        <p>&copy; 2024 Hampton Building Control. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!--Click to Top-->
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top"><b>&uarr;</b></button>
+    <script src="js/script.js"></script>
+</body>
+</html>
